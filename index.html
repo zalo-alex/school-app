@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a4e4501f2f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="close">
+        <div class="top">
+            <div>
+                <button>
+                    <i class="fa-regular fa-xl fa-bell"></i>
+                </button>
+            </div>
+            <div>
+                <button>
+                    <i class="fa-solid fa-xl fa-user"></i>
+                </button>
+            </div>
+            <div>
+                <button id="open-nav-button">
+                    <i class="fa-solid fa-xl fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="menu">
+                <button class="menu-btn">Placeholder Menu 1<i class="fa-solid fa-angle-down"></i></button>
+                <div class="submenus">
+                    <button class="submenu-btn">Placeholder Submenu 1</button>
+                    <button class="submenu-btn">Placeholder Submenu 2</button>
+                    <button class="submenu-btn">Placeholder Submenu 3</button>
+                </div>
+            </div>
+            <div class="menu">
+                <button class="menu-btn">Placeholder Menu 2<i class="fa-solid fa-angle-down"></i></button>
+                <div class="submenus">
+                    <button class="submenu-btn">Placeholder Submenu 1</button>
+                    <button class="submenu-btn">Placeholder Submenu 2</button>
+                    <button class="submenu-btn">Placeholder Submenu 3</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="main-part welcome center-text">
+            <span>Bienvenue</span>
+            <span class="text-bold text-primary">Alex</span>
+        </div>
+        <div class="main-part timetable">
+            <span class="part-title">Emplois du temps</span>
+            <div class="table">
+                <div class="subject done">
+                    <span class="subject-time time-start">9h00</span>
+                    <span class="subject-title">Français</span>
+                    <span class="subject-time time-end">10h00</span>
+                </div>
+                <div class="subject">
+                    <span class="subject-time time-start">10h00</span>
+                    <span class="subject-title">Mathématique</span>
+                    <span class="subject-time time-end">11h00</span>
+                </div>
+                <div class="subject">
+                    <span class="subject-time time-start">11h00</span>
+                    <span class="subject-title">EPS</span>
+                    <span class="subject-time time-end">12h00</span>
+                </div>
+            </div>
+        </div>
+        <div class="main-part homeworks">
+            <span class="part-title">Travail à faire</span>
+            <div class="day">
+                <div class="day-date">Mardi 17 Janvier</div>
+                <div class="homework done">
+                    <div class="subject">Mathématique</div>
+                    <div class="description">Faire l'exericice 2</div>
+                    <div class="done-btn"><button>Finir</button></div>
+                </div>
+                <div class="homework">
+                    <div class="subject">Mathématique</div>
+                    <div class="description">Faire les exericices 3 et 4</div>
+                    <div class="done-btn"><button>Finir</button></div>
+                </div>
+                <div class="homework">
+                    <div class="subject">Mathématique</div>
+                    <div class="description">Evaluation</div>
+                    <div class="done-btn"><button>Finir</button></div>
+                </div>
+            </div>
+            <div class="day">
+                <div class="day-date">Jeudi 19 Janvier</div>
+                <div class="homework">
+                    <div class="subject">Français</div>
+                    <div class="description">Lire le livre "Les oiseaux" de Daphné du Maurier et rédiger une nouvelle de 500 lignes dans le meme theme que "Les oiseaux"</div>
+                    <div class="done-btn"><button>Finir</button></div>
+                </div>
+                <div class="homework">
+                    <div class="subject">Physique</div>
+                    <div class="description">Faire les expériences 1 et 2 chez vous (attention c'est assez explosif)</div>
+                    <div class="done-btn"><button>Finir</button></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

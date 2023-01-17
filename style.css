@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --primary: rgb(73, 145, 212);
+    --light-primary: rgb(91, 163, 230);
+    --black: rgb(0, 0, 0);
+    --white: rgb(255, 255, 255);
+    --light-gray: rgb(240, 240, 240);
+    --gray: rgb(150, 150, 150);
+    --black-transparent: rgba(0, 0, 0, 0);
+    --black-opacity-33: rgba(0, 0, 0, 0.33);
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    height: 4em;
+    width: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    transition: 0.5s;
+    z-index: 99;
+}
+
+nav * {
+    color: var(--white);
+}
+
+nav .top {
+    width: 100%;
+    display: flex;
+    background-color: var(--primary);
+    align-items: center;
+    justify-content: space-between;
+    height: 4em;
+    transition: 0.25s;
+}
+
+nav .top div {
+    height: 4em;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .top div button {
+    background-color: var(--black-transparent);
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+nav .top div button i {
+    height: auto;
+    width: auto;
+    transition: 0.5s;
+}
+
+nav.open #open-nav-button i {
+    transform: rotateZ(90deg);
+}
+
+nav .bottom {
+    background-color: var(--light-primary);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items:  flex-end;
+    justify-content: flex-start;
+    padding: 2em;
+    transition: 0.5s;
+}
+
+nav .bottom .menu {
+    transition: 0.40s;
+    text-align: end;
+}
+
+nav .bottom .menu button {
+    border: none;
+    background: none;
+}
+
+nav .bottom .menu .menu-btn {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav .bottom .menu .menu-btn i {
+    margin-left: 0.5em;
+    transition: 0.5s;
+}
+
+nav .bottom .menu .menu-btn.selected i {
+    transform: rotateZ(180deg);
+}
+
+nav .bottom .menu .submenus {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+nav .bottom .menu .menu-btn.selected ~ .submenus {
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+}
+
+nav .bottom .menu .submenu-btn {
+    font-size: 1.25em;
+    margin-right: 1em;
+    margin-top: 0.5em;
+    color: var(--light-gray);
+}
+
+nav.open {
+    height: 100%;
+}
+
+nav.close {
+    height: 0%;
+}
+
+nav.open .bottom {
+    height: 100%;
+}
+
+nav.close .bottom {
+    height: 0px;
+    padding: 0em;
+}
+
+nav.open .bottom .menu {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+nav.close .bottom .menu {
+    transform: translateX(20em);
+    opacity: 0;
+}
+
+/* 
+    MAIN
+*/
+
+main {
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+main .main-part {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 4em;
+    height: fit-content;
+    flex-direction: column;
+    margin-top: 1.5em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    box-shadow: 0px 0px 10px 1px var(--black-opacity-33);
+}
+
+main .main-part .part-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+main .main-part .center-text span {
+    margin-inline: auto;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/*
+    Bienvenue
+*/
+
+main .main-part.welcome {
+    font-size: 1.5em;
+    box-shadow: none;
+    min-height: none;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+/*
+    Emplois du temps
+*/
+
+main .timetable .table {
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+main .timetable .table .subject {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-left: 5px solid var(--light-primary);
+    border-radius: 0.25em;
+    background-color: var(--light-gray);
+    padding: 0.5em;
+    padding-left: 1em;
+}
+
+main .timetable .table .subject.done {
+    border-left: 5px solid var(--gray);
+}
+
+main .timetable .table .subject .subject-time {
+    font-size: 0.75em;
+    color: var(--gray);
+}
+
+main .timetable .table .subject .subject-title {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+/*
+    Travail a faire
+*/
+
+main .homeworks {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1em;
+}
+
+main .homeworks .day {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+main .homeworks .day .day-date {
+    font-weight: bold;
+    color: var(--primary);
+    margin-left: 1em;
+}
+
+main .homeworks .day .homework {
+    border-left: 5px solid var(--light-primary);
+    background-color: var(--light-gray);
+    padding: 0.5em;
+}
+
+main .homeworks .day .homework:not(:last-child) {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+main .homeworks .day .homework .description {
+    color: var(--gray);
+    font-size: 0.75em;
+}
+
+main .homeworks .day .homework .done-btn {
+    width: 100%;
+    text-align: right;
+}
+
+main .homeworks .day .homework .done-btn button {
+    background:none;
+    border: none;
+    font-size: 0.75em;
+    padding: 0.5em;
+    background-color: var(--light-primary);
+    color: var(--white);
+    border-radius: 0.5em;
+}
+
+/*
+    Global
+*/
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-primary {
+    color: var(--primary)
+}
